@@ -1,8 +1,9 @@
-import java.util.Arrays;
+package softwareTesingProject;
+//import java.util.*;
 
-class GfG {
+public class Sort {
 
-    static void selectionSort(int[] arr){
+    public int[] selectionSort(int[] arr){
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
           
@@ -25,11 +26,14 @@ class GfG {
             // correct position
             int temp = arr[i];
             arr[i] = arr[min_idx];
-            arr[min_idx] = temp;           
+            arr[min_idx] = temp; 
+            
+            
         }
+        return arr;
     }
 
-    static void printArray(int[] arr){
+    public static void printArray(int[] arr){
         for (int val : arr) {
             System.out.print(val + " ");
         }
@@ -42,10 +46,17 @@ class GfG {
         System.out.print("Original array: ");
         printArray(arr);
 
-        selectionSort(arr);
+        Sort sort1 = new Sort();
+
+        int[] arr1 = sort1.selectionSort(arr);
+
+      /*   String str1 = new String();
+        str1 = "hello";
+        String str2 = new String();
+        str2 = sort1.selectionSort(str1); */
 
         System.out.print("Sorted array: ");
-        printArray(arr);
+        printArray(arr1);
     }
 }
 
